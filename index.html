@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>dotnetxpert.com | Next-Gen Expert Certification & Mentoring Platform</title>
-
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="dotnetxpert.com — Next-generation expert verification, mentoring, consulting, and partner platform for OntoMesh/AI and collective intelligence.">
   <style>
     body { font-family:'Segoe UI', 'Malgun Gothic', Arial, sans-serif; background:#f6f8fb; color:#232c36; margin:0;}
-    .main { max-width:800px; margin:46px auto; background:#fff; border-radius:17px; box-shadow:0 3px 15px #e7eaf4; padding:38px 29px 36px 29px;}
+    .main { 
+      max-width:800px; 
+      margin:46px auto; 
+      background:#fff; 
+      border-radius:17px; 
+      box-shadow:0 3px 15px #e7eaf4; 
+      padding:38px 29px 36px 29px;
+      position: relative;
+    }
     h1 { color:#2572b6; font-size:2.13em; margin-bottom:7px;}
     h2 { color:#304463; font-size:1.20em; margin:30px 0 12px 0;}
     p, li { font-size:1.08em; line-height:1.82;}
@@ -22,132 +28,167 @@
     .notice { background:#fff9e0; border-left:6px solid #ffd950; padding:11px 16px; color:#ad9108; border-radius:6px; margin:14px 0;}
     .footer { margin-top:42px; text-align:center; color:#a5acc3; font-size:0.98em;}
     .substack { color:#204d93; font-weight:bold;}
+
+    /* Language Toggle Styles */
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      background-color: #f4faff;
+      color: #2572b6;
+      border: 1px solid #cce1ff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+    }
+    .lang-toggle:hover {
+      background-color: #e7f5ff;
+      color: #304463;
+      box-shadow: 0 1px 8px #e7eaf4;
+    }
+    .lang-en { display: inline; }
+    .lang-ko { display: none; }
+
     @media (max-width:600px) {
       .main { padding:13px 5vw 19px 5vw;}
       h1 { font-size:1.30em;}
+      .lang-toggle {
+        top: 10px;
+        right: 10px;
+        font-size: 0.8em;
+      }
     }
   </style>
 </head>
 <body>
   <div class="main">
+    <button id="lang-toggle" class="lang-toggle">
+      <span class="lang-en">한국어</span>
+      <span class="lang-ko">English</span>
+    </button>
     <div class="menu">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#mentoring">Mentoring</a>
-      <a href="#partners">Partners</a>
+      <a href="#about"><span class="lang-en">About</span><span class="lang-ko">소개</span></a>
+      <a href="#services"><span class="lang-en">Services</span><span class="lang-ko">서비스</span></a>
+      <a href="#mentoring"><span class="lang-en">Mentoring</span><span class="lang-ko">멘토링</span></a>
+      <a href="#partners"><span class="lang-en">Partners</span><span class="lang-ko">파트너</span></a>
       <a href="https://github.com/nettalk72/dotnetxpert/discussions" target="_blank" style="color:#2467c7;font-weight:bold;">
-        Discussions
+        <span class="lang-en">Discussions</span><span class="lang-ko">토론</span>
       </a>
-      <a href="#contact">Contact</a>
+      <a href="#contact"><span class="lang-en">Contact</span><span class="lang-ko">문의</span></a>
     </div>
-    <h1>dotnetxpert.com</h1>
-    <div class="korean">글로벌 차세대 전문가 인증·멘토링·컨설팅 플랫폼</div>
+    <h1><span class="lang-en">dotnetxpert.com</span><span class="lang-ko">닷넷엑스퍼트.com</span></h1>
+    <div class="korean"><span class="lang-en">Next-Gen Expert Certification & Mentoring Platform</span><span class="lang-ko">글로벌 차세대 전문가 인증·멘토링·컨설팅 플랫폼</span></div>
     <div class="block">
-      <b>Welcome!</b> dotnetxpert.com is the next-generation platform for expert certification, mentoring, and trusted consulting worldwide.<br>
-      <span class="korean">dotnetxpert.com은 전 세계 전문가 인증, 멘토링, 신뢰 기반 컨설팅을 위한 차세대 플랫폼입니다.</span>
+      <b><span class="lang-en">Welcome!</span><span class="lang-ko">환영합니다!</span></b> <span class="lang-en">dotnetxpert.com is the next-generation platform for expert certification, mentoring, and trusted consulting worldwide.</span><span class="lang-ko">dotnetxpert.com은 전 세계 전문가 인증, 멘토링, 신뢰 기반 컨설팅을 위한 차세대 플랫폼입니다.</span>
     </div>
-
-    <h2 id="about">About dotnetxpert.com <span class="korean">| 소개</span></h2>
+    <h2 id="about"><span class="lang-en">About dotnetxpert.com</span><span class="lang-ko">닷넷엑스퍼트.com 소개</span></h2>
     <ul>
-      <li>Next-gen expert verification and credentialing system for all fields<br>
-        <span class="korean">모든 분야를 아우르는 차세대 전문가 인증·자격 검증 시스템</span>
+      <li><span class="lang-en">Next-gen expert verification and credentialing system for all fields</span><span class="lang-ko">모든 분야를 아우르는 차세대 전문가 인증·자격 검증 시스템</span>
       </li>
-      <li>Open, trusted mentoring, coaching, and consulting hub<br>
-        <span class="korean">신뢰 기반의 오픈 멘토링·코칭·컨설팅 허브</span>
+      <li><span class="lang-en">Open, trusted mentoring, coaching, and consulting hub</span><span class="lang-ko">신뢰 기반의 오픈 멘토링·코칭·컨설팅 허브</span>
       </li>
-      <li>Official partner of <a href="https://ontomotoos.org" target="_blank">OntoMotoOS.org</a> and <a href="https://ontomotoos.ai" target="_blank">OntoMotoOS.ai</a> — mesh/branch intelligence ecosystem<br>
-        <span class="korean">OntoMotoOS.org/ai 공식 지식생태계 파트너</span>
+      <li><span class="lang-en">Official partner of </span><a href="https://ontomotoos.org" target="_blank">OntoMotoOS.org</a><span class="lang-en"> and </span><a href="https://ontomotoos.ai" target="_blank">OntoMotoOS.ai</a><span class="lang-en"> — mesh/branch intelligence ecosystem</span><span class="lang-ko">OntoMotoOS.org/ai 공식 지식생태계 파트너</span>
       </li>
       <li>
-        Source code: <a href="https://github.com/nettalk72/dotnetxpert" target="_blank">GitHub (dotnetxpert)</a>
+        <span class="lang-en">Source code: </span><span class="lang-ko">소스 코드: </span><a href="https://github.com/nettalk72/dotnetxpert" target="_blank">GitHub (dotnetxpert)</a>
       </li>
     </ul>
-    
-    <h2 id="services">Key Services <span class="korean">| 주요 서비스</span></h2>
+    <h2 id="services"><span class="lang-en">Key Services</span><span class="lang-ko">주요 서비스</span></h2>
     <ul>
-      <li>Global expert verification, credentialing, and badge system<br>
-        <span class="korean">글로벌 전문가 인증, 자격 배지 시스템</span>
+      <li><span class="lang-en">Global expert verification, credentialing, and badge system</span><span class="lang-ko">글로벌 전문가 인증, 자격 배지 시스템</span>
       </li>
-      <li>Mentoring, coaching, and project-based consulting<br>
-        <span class="korean">멘토링, 코칭, 프로젝트 기반 컨설팅</span>
+      <li><span class="lang-en">Mentoring, coaching, and project-based consulting</span><span class="lang-ko">멘토링, 코칭, 프로젝트 기반 컨설팅</span>
       </li>
-      <li>Domain-specific knowledge sharing and expert forums<br>
-        <span class="korean">분야별 지식 공유 및 전문가 포럼</span>
+      <li><span class="lang-en">Domain-specific knowledge sharing and expert forums</span><span class="lang-ko">분야별 지식 공유 및 전문가 포럼</span>
       </li>
-      <li>Collaboration with OntoMesh/AI, research, and industry<br>
-        <span class="korean">OntoMesh/AI·연구·산업과의 협업</span>
+      <li><span class="lang-en">Collaboration with OntoMesh/AI, research, and industry</span><span class="lang-ko">OntoMesh/AI·연구·산업과의 협업</span>
       </li>
     </ul>
-
-    <h2 id="mentoring">Mentoring & Consulting <span class="korean">| 멘토링 & 컨설팅</span></h2>
+    <h2 id="mentoring"><span class="lang-en">Mentoring & Consulting</span><span class="lang-ko">멘토링 & 컨설팅</span></h2>
     <ul>
-      <li>Apply as a mentor or expert (coming soon)<br>
-        <span class="korean">멘토·전문가 신청(예정)</span>
+      <li><span class="lang-en">Apply as a mentor or expert (coming soon)</span><span class="lang-ko">멘토·전문가 신청(예정)</span>
       </li>
-      <li>Find certified mentors and book sessions globally<br>
-        <span class="korean">인증 멘토 검색 및 글로벌 세션 예약</span>
+      <li><span class="lang-en">Find certified mentors and book sessions globally</span><span class="lang-ko">인증 멘토 검색 및 글로벌 세션 예약</span>
       </li>
-      <li>Open mentoring circles, workshops, and career coaching<br>
-        <span class="korean">오픈 멘토링, 워크샵, 커리어 코칭</span>
+      <li><span class="lang-en">Open mentoring circles, workshops, and career coaching</span><span class="lang-ko">오픈 멘토링, 워크샵, 커리어 코칭</span>
       </li>
     </ul>
-
-    <h2 id="partners">Official Partners <span class="korean">| 공식 파트너</span></h2>
+    <h2 id="partners"><span class="lang-en">Official Partners</span><span class="lang-ko">공식 파트너</span></h2>
     <ul>
       <li>
-        <a href="https://ontomesh.org" target="_blank">OntoMesh.org</a> — Official Network & Root Domain  
-        <br><span class="korean">공식 네트워크/루트 도메인</span>
-      </li>      
-      <li>
-        <a href="https://ontomotoos.org" target="_blank">OntoMotoOS.org</a> — Open Governance & Community Hub
-        <br><span class="korean">오픈 거버넌스/커뮤니티 허브</span>
+        <a href="https://ontomesh.org" target="_blank">OntoMesh.org</a> — <span class="lang-en">Official Network & Root Domain</span><span class="lang-ko">공식 네트워크/루트 도메인</span>
       </li>
       <li>
-        <a href="https://ontomotoos.ai" target="_blank">OntoMotoOS.ai</a> — Official Engine & AI Platform
-        <br><span class="korean">공식 엔진/AI 플랫폼</span>
+        <a href="https://ontomotoos.org" target="_blank">OntoMotoOS.org</a> — <span class="lang-en">Open Governance & Community Hub</span><span class="lang-ko">오픈 거버넌스/커뮤니티 허브</span>
       </li>
       <li>
-        <a href="https://ontokernel.org" target="_blank">OntoKernel.org</a> — Core Engine/Kernel Library
-        <br><span class="korean">코어 엔진/커널 라이브러리</span>
+        <a href="https://ontomotoos.ai" target="_blank">OntoMotoOS.ai</a> — <span class="lang-en">Official Engine & AI Platform</span><span class="lang-ko">공식 엔진/AI 플랫폼</span>
       </li>
       <li>
-        <a href="https://ontoformula.org" target="_blank">OntoFormula.org</a> — Open Formula & Philosophy Hub
-        <br><span class="korean">공식 공식/철학/수식 허브</span>
+        <a href="https://ontokernel.org" target="_blank">OntoKernel.org</a> — <span class="lang-en">Core Engine/Kernel Library</span><span class="lang-ko">코어 엔진/커널 라이브러리</span>
       </li>
       <li>
-        <a href="https://dotnetone.com" target="_blank">dotnetone.com</a> — Global Expert Network
-        <br><span class="korean">글로벌 전문가 네트워크</span>
+        <a href="https://ontoformula.org" target="_blank">OntoFormula.org</a> — <span class="lang-en">Open Formula & Philosophy Hub</span><span class="lang-ko">공식 공식/철학/수식 허브</span>
+      </li>
+      <li>
+        <a href="https://dotnetone.com" target="_blank">dotnetone.com</a> — <span class="lang-en">Global Expert Network</span><span class="lang-ko">글로벌 전문가 네트워크</span>
       </li>
     </ul>
-
-    <h2 id="network">Official Media & News <span class="korean">| 공식 미디어·블로그·아카이브</span></h2>
+    <h2 id="network"><span class="lang-en">Official Media & News</span><span class="lang-ko">공식 미디어·블로그·아카이브</span></h2>
     <ul>
       <li>
         <a href="https://nettalk83.substack.com/" target="_blank" class="substack">nettalk83.substack.com</a>
-        <span style="color:#204d93; font-size:0.99em;">– Official Blog · News · Essays · Archive<br>
-        <span class="korean">공식 블로그·뉴스·아카이브(차세대 전문가 네트워크)</span></span>
+        <span style="color:#204d93; font-size:0.99em;"><span class="lang-en">– Official Blog · News · Essays · Archive</span><span class="lang-ko">– 공식 블로그·뉴스·아카이브(차세대 전문가 네트워크)</span></span>
       </li>
     </ul>
-
     <div class="notice">
-      <b>COMMUNITY:</b>
-      Join the discussion, ask questions, and propose ideas in our official 
+      <b><span class="lang-en">COMMUNITY:</span><span class="lang-ko">커뮤니티:</span></b>
+      <span class="lang-en">Join the discussion, ask questions, and propose ideas in our official </span>
       <a href="https://github.com/nettalk72/dotnetxpert/discussions" target="_blank">GitHub Discussions ↗</a>.
-      <br><span class="korean">공식 GitHub Discussions에서 토론·질문·제안 환영!</span>
+      <br><span class="lang-ko">공식 GitHub Discussions에서 토론·질문·제안 환영!</span>
     </div>
-
-    <h2 id="contact">Contact <span class="korean">| 문의</span></h2>
+    <h2 id="contact"><span class="lang-en">Contact</span><span class="lang-ko">문의</span></h2>
     <div>
-      For inquiries, partnership, or early access:<br>
+      <span class="lang-en">For inquiries, partnership, or early access:</span><span class="lang-ko">문의, 파트너십, 얼리액세스 신청:</span><br>
       <b id="email"></b><br>
-      <span class="korean">문의, 파트너십, 얼리액세스 신청:</span>
     </div>
     <script>
       document.getElementById("email").innerHTML = "nettalk72" + "&#64;" + "naver.com";
-    </script>
+      
+      const langToggleButton = document.getElementById('lang-toggle');
+      const langEnElements = document.querySelectorAll('.lang-en');
+      const langKoElements = document.querySelectorAll('.lang-ko');
+      let currentLang = 'en';
 
+      // 페이지 로드 시 언어 설정을 확인하고 적용
+      if (localStorage.getItem('lang') === 'ko') {
+          currentLang = 'ko';
+          langEnElements.forEach(el => el.style.display = 'none');
+          langKoElements.forEach(el => el.style.display = 'inline');
+      } else {
+          currentLang = 'en';
+          langEnElements.forEach(el => el.style.display = 'inline');
+          langKoElements.forEach(el => el.style.display = 'none');
+      }
+
+      langToggleButton.addEventListener('click', () => {
+          if (currentLang === 'en') {
+              currentLang = 'ko';
+              localStorage.setItem('lang', 'ko');
+              langEnElements.forEach(el => el.style.display = 'none');
+              langKoElements.forEach(el => el.style.display = 'inline');
+          } else {
+              currentLang = 'en';
+              localStorage.setItem('lang', 'en');
+              langEnElements.forEach(el => el.style.display = 'inline');
+              langKoElements.forEach(el => el.style.display = 'none');
+          }
+      });
+    </script>
     <div class="footer">
-      &copy; 2025 dotnetxpert.com · Next-Gen Expert Platform & Trusted Mentoring
+      <span class="lang-en">&copy; 2025 dotnetxpert.com · Next-Gen Expert Platform & Trusted Mentoring</span><span class="lang-ko">&copy; 2025 닷넷엑스퍼트.com · 차세대 전문가 플랫폼 & 신뢰 기반 멘토링</span>
     </div>
   </div>
 </body>
